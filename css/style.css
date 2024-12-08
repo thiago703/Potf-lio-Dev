@@ -1,0 +1,206 @@
+@import url(global.css);
+@import url(card.css);
+
+header {
+    background: url('../assets/images/Background_Intro.png') center/cover no-repeat;
+    padding: 7.5rem 0 3.5rem;
+
+    & a {
+        display: flex;
+        justify-content: center;
+        margin-top: 3.5rem;
+        transition: opacity 0.5s ease;
+        & :hover {
+            opacity: 0.5;
+        }
+    }
+}
+
+.info {
+    width: 100%;
+    max-width: 42.5rem;
+    margin: 0 auto 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    & .image-avatar {
+        position: relative;
+        margin-bottom: 3.5rem;
+        & img:first-child {
+            margin-bottom: 5px;
+            border: 3px solid var(--gray-100);
+            outline: 2px solid var(--color-red);
+            border-radius: 250px;
+        }
+        & img:last-child {
+            position: absolute;
+            bottom: 0;
+            right: -8px;
+        }
+    }
+    & .subtitle {
+        font-size: 1.25rem;
+    }
+    & .subtitle span {
+        color: var(--color-red);
+        padding-bottom: 0.5rem;
+    }
+    & .title-lg {
+        margin-bottom: 1rem;
+        color: var(--color-gray-600);
+    }
+    & .text-sm {
+        color: var(--color-gray-400);
+    }
+}
+
+.tags {
+    width: 100%;
+    max-width: 47.125rem;
+    margin: 0 auto;
+    justify-content: space-between;
+    display: flex;
+    gap: 1rem;
+    & .tag {
+        background-color: var(--color-gray-300);
+        color: var(--color-gray-500);
+        padding: 0.5rem 1rem;
+        border-radius: 50px;
+        display: flex;
+        gap: 0.5rem;
+        justify-content: center;
+        align-items: center;
+        & img {
+            width: 1.5rem;
+        }
+    }
+}
+
+#projects {
+    background-color: var(--color-gray-200);
+    padding: 4.5rem 0 9rem;
+    & h2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 0.5rem;
+        & span {
+            color: var(--color-red);
+        }
+    }
+}
+
+
+.grid {
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 3.5rem;
+}
+
+.services {
+    padding: 5.5rem 0 7.5rem;
+    background-color: var(--color-gray-100);
+    & h2 {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-bottom: 3.5rem;
+        & span {
+            color: var(--color-red);
+        }
+    }
+}
+
+.service-card {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.contact {
+    padding: 8rem 0 12.5em;
+    background: url(../assets/images/Background_Contacts.png) center/cover no-repeat;
+}
+
+& .title-contact,
+h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    & span {
+        color: var(--color-red);
+    }
+}
+
+.links {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.links {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    & .button-contact {
+        display: flex;
+        width: 100%;
+        max-width: 25rem;
+        padding: 1.25rem;
+        justify-content: start;
+        align-items: center;
+        gap: 0.75rem;
+        border-radius: 0.5rem;
+        background: var(--color-gray-300);
+        color: var(--color-gray-500);
+        text-decoration: none;
+        position: relative;
+        border: 1px solid var(--color-gray-300);
+        & .text-contact-button {
+            display: flex;
+            align-items: center;
+        }
+    }
+    & ::after {
+        content: '';
+        position: absolute;
+        right: 1.5rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        background: url(../assets/icons/ArrowUpRight.svg) center/cover no-repeat;
+    }
+    & :hover {
+        background: var(--color-gray-200);
+        border: 1px solid var(--color-blue);
+    }
+    & img:hover {
+        border: none;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 4rem 0 3.5rem;
+    }
+    .info {
+        margin-bottom: 3rem;
+    }
+    .tags {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
